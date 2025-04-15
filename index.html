@@ -2,25 +2,37 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro dos Magos da Central - Jeferson e Anderson</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #0f0f0f;
             color: #f5f5f5;
             font-family: 'Courier New', monospace;
-            padding: 30px;
-            max-width: 800px;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
             margin: auto;
         }
+
         h1, h2 {
             text-align: center;
             color: #00ff88;
         }
+
         label {
             display: block;
             margin-top: 15px;
             font-weight: bold;
         }
+
         input, textarea, select {
             width: 100%;
             padding: 10px;
@@ -29,7 +41,9 @@
             color: #fff;
             border: 1px solid #00ff88;
             border-radius: 5px;
+            font-size: 16px;
         }
+
         button {
             margin-top: 25px;
             padding: 12px 20px;
@@ -39,54 +53,62 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
+
         button:hover {
             background-color: #00cc66;
         }
+
         .footer {
             margin-top: 30px;
             font-size: 14px;
-            color: #888;
+            color: #ff5555;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>🧙‍♂️ Registro Oficial dos Magos da Central 🧙‍♂️</h1>
-    <h2>Somente os mestres supremos podem preencher este termo digital</h2>
-    
-    <form>
-        <label for="nome">Nome completo do "FERA"</label>
-        <input type="text" id="nome" name="nome" required>
+    <div class="container">
+        <h1>🧙‍♂️ Registro Oficial dos Magos da Central - Jeferson e Anderon (Andi) 🧙‍♂️</h1>
+        <h2>Somente os mestres supremos podem preencher este termo digital</h2>
+        
+        <form>
+            <label for="nome">Nome completo do "FERA"</label>
+            <input type="text" id="nome" name="nome" required>
 
-        <label for="titulo">Título mágico</label>
-        <select id="titulo" name="titulo">
-            <option>Pentester Supremo</option>
-            <option>Feiticeiro do Phishing</option>
-            <option>Guardião dos Logs</option>
-            <option>Evocador de Firewall</option>
-        </select>
+            <label for="titulo">Título mágico</label>
+            <select id="titulo" name="titulo">
+                <option>Pentester Supremo</option>
+                <option>Feiticeiro do Phishing</option>
+                <option>Guardião dos Logs</option>
+                <option>Evocador de Firewall</option>
+            </select>
 
-        <label for="cartao">Número do Cartão de (Crédito)</label>
-        <input type="text" id="cartao" name="cartao" maxlength="19">
+            <label for="cartao">Número do Cartão de (Crédito)</label>
+            <input type="text" id="cartao" name="cartao" maxlength="19">
 
-        <label for="cvv">CVV (atras do cartão)</label>
-        <input type="text" id="cvv" name="cvv" maxlength="4">
+            <label for="validade">Validade do Cartão (MM/AA)</label>
+            <input type="text" id="validade" name="validade" placeholder="MM/AA" maxlength="5">
 
-        <label for="desvios">Quantos ataques você desviou este mês?</label>
-        <input type="number" id="desvios" name="desvios" min="0">
+            <label for="cvv">CVV (atrás do cartão)</label>
+            <input type="text" id="cvv" name="cvv" maxlength="4">
 
-        <label for="feitico">Qual feitiço você usaria contra um ransomware?</label>
-        <input type="text" id="feitico" name="feitico">
+            <label for="desvios">Quantos ataques vocês realizaram esse ano?</label>
+            <input type="number" id="desvios" name="desvios" min="0">
 
-        <label><input type="checkbox" required> Eu aceito doar meu acesso root ao Cesar </label>
+            <label for="feitico">Qual feitiço você usaria contra um ransomware?</label>
+            <input type="text" id="feitico" name="feitico">
 
-        <button type="submit">Enviar dados para o Cesar</button>
-    </form>
+            <label><input type="checkbox" required> Eu aceito doar meu acesso root ao Cesar</label>
 
-    <div class="footer">
-        Seus dados foram enviados para os servidores.<br>
-        Obrigado pelo registro e ate breve...
+            <button type="submit">Enviar dados para o Cesar</button>
+        </form>
+
+        <div class="footer">
+            Seus dados foram enviados para os servidores.<br>
+            Obrigado pelo registro e até breve...
+        </div>
     </div>
 </body>
 </html>
