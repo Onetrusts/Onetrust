@@ -2,31 +2,117 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Surpresa!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Segurança - Sicoob</title>
     <style>
         body {
-            background-color: #000;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            padding-top: 100px;
         }
+
+        header {
+            background-color: #2d9f1d;
+            color: white;
+            padding: 20px;
+        }
+
         h1 {
-            font-size: 48px;
+            font-size: 32px;
+            margin: 0;
         }
-        img {
+
+        .container {
+            background-color: #ffffff;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .message {
+            color: #e60000;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .input-field {
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #2d9f1d;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #269217;
+        }
+
+        .footer {
             margin-top: 30px;
-            max-width: 90%;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <h1>⚠️ VOCÊ FOI HACKEADO ⚠️</h1>
-    <p>(brincadeirinha 😅)</p>
-    <img src="https://media.giphy.com/media/jpbnoe3UIa8TU8LM13/giphy.gif" alt="Troll GIF">
-    <audio autoplay>
-        <source src="https://www.myinstants.com/media/sounds/trololo.mp3" type="audio/mpeg">
-        Seu navegador não suporta áudio.
-    </audio>
+
+    <header>
+        <h1>Sicoob - Alerta de Segurança</h1>
+    </header>
+
+    <div class="container">
+        <h2>Aviso de Comprometimento de Conta</h2>
+        <p class="message">Atenção! Detectamos um acesso suspeito à sua conta. Para sua segurança, pedimos que insira suas credenciais abaixo para validar seu acesso.</p>
+
+        <form id="loginForm">
+            <input type="text" id="username" class="input-field" placeholder="Digite seu CPF ou Conta" required />
+            <input type="password" id="password" class="input-field" placeholder="Digite sua Senha" required />
+            <button type="submit" class="submit-btn">Validar Acesso</button>
+        </form>
+
+        <div id="error-message" class="message" style="display:none;">Por favor, insira suas credenciais corretamente.</div>
+
+        <div class="footer">
+            <p>© Sicoob - Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Simula um erro no login
+            if (!username || !password) {
+                document.getElementById("error-message").style.display = "block";
+            } else {
+                // Pode aqui personalizar para direcionar a uma página fictícia ou mostrar mais um alerta
+                alert("Sistema comprometedido! Acesso negado!");
+            }
+        });
+    </script>
+
 </body>
 </html>
