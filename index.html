@@ -2,117 +2,91 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso de Segurança - Sicoob</title>
+    <title>Registro dos Magos da Central - Jeferson e Anderson</title>
     <style>
         body {
-            background-color: #f1f1f1;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #0f0f0f;
+            color: #f5f5f5;
+            font-family: 'Courier New', monospace;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
             text-align: center;
+            color: #00ff88;
         }
-
-        header {
-            background-color: #2d9f1d;
-            color: white;
-            padding: 20px;
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
         }
-
-        h1 {
-            font-size: 32px;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #ffffff;
-            width: 50%;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #333;
-        }
-
-        .message {
-            color: #e60000;
-            font-size: 18px;
-            margin: 20px 0;
-        }
-
-        .input-field {
-            padding: 12px;
-            margin: 10px 0;
+        input, textarea, select {
             width: 100%;
-            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #1c1c1c;
+            color: #fff;
+            border: 1px solid #00ff88;
             border-radius: 5px;
-            font-size: 16px;
         }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background-color: #2d9f1d;
+        button {
+            margin-top: 25px;
+            padding: 12px 20px;
+            background-color: #00ff88;
+            color: black;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
-            color: white;
-            font-size: 18px;
             cursor: pointer;
         }
-
-        .submit-btn:hover {
-            background-color: #269217;
+        button:hover {
+            background-color: #00cc66;
         }
-
         .footer {
             margin-top: 30px;
             font-size: 14px;
-            color: #666;
+            color: #888;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <h1>🧙‍♂️ Registro Oficial dos Magos da Central 🧙‍♂️</h1>
+    <h2>Somente os mestres supremos podem preencher este termo digital</h2>
+    
+    <form>
+        <label for="nome">Nome completo do "FERA"</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <header>
-        <h1>Sicoob - Alerta de Segurança</h1>
-    </header>
+        <label for="titulo">Título mágico</label>
+        <select id="titulo" name="titulo">
+            <option>Pentester Supremo</option>
+            <option>Feiticeiro do Phishing</option>
+            <option>Guardião dos Logs</option>
+            <option>Evocador de Firewall</option>
+        </select>
 
-    <div class="container">
-        <h2>Aviso de Comprometimento de Conta</h2>
-        <p class="message">Atenção! Detectamos um acesso suspeito à sua conta. Para sua segurança, pedimos que insira suas credenciais abaixo para validar seu acesso.</p>
+        <label for="cartao">Número do Cartão de (Crédito)</label>
+        <input type="text" id="cartao" name="cartao" maxlength="19">
 
-        <form id="loginForm">
-            <input type="text" id="username" class="input-field" placeholder="Digite seu CPF ou Conta" required />
-            <input type="password" id="password" class="input-field" placeholder="Digite sua Senha" required />
-            <button type="submit" class="submit-btn">Validar Acesso</button>
-        </form>
+        <label for="cvv">CVV (atras do cartão)</label>
+        <input type="text" id="cvv" name="cvv" maxlength="4">
 
-        <div id="error-message" class="message" style="display:none;">Por favor, insira suas credenciais corretamente.</div>
+        <label for="desvios">Quantos ataques você desviou este mês?</label>
+        <input type="number" id="desvios" name="desvios" min="0">
 
-        <div class="footer">
-            <p>© Sicoob - Todos os direitos reservados.</p>
-        </div>
+        <label for="feitico">Qual feitiço você usaria contra um ransomware?</label>
+        <input type="text" id="feitico" name="feitico">
+
+        <label><input type="checkbox" required> Eu aceito doar meu acesso root ao Cesar </label>
+
+        <button type="submit">Enviar dados para o Cesar</button>
+    </form>
+
+    <div class="footer">
+        Seus dados foram enviados para os servidores.<br>
+        Obrigado pelo registro e ate breve...
     </div>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            let username = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
-
-            // Simula um erro no login
-            if (!username || !password) {
-                document.getElementById("error-message").style.display = "block";
-            } else {
-                // Pode aqui personalizar para direcionar a uma página fictícia ou mostrar mais um alerta
-                alert("Sistema comprometedido! Acesso negado!");
-            }
-        });
-    </script>
-
 </body>
 </html>
